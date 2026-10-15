@@ -1,3 +1,4 @@
+#include <iostream>
 // utility.cpp
 
 // IN THIS FILE, define any of your OWN functions you may need to 
@@ -11,11 +12,21 @@
 // these functions
 
 bool isOdd(int x) { 
-  return false;  // REPLACE THIS STUB WITH REAL CODE
+  return ((x & 1) == 1);
 }
+
 bool isEven(int x) { 
-  return false;  // REPLACE THIS STUB WITH REAL CODE
+  return ((x & 1) == 0);
 }
+
 bool isPrime(int x) { 
-  return false;  // REPLACE THIS STUB WITH REAL CODE
+  if (x <= 1) return false;
+
+  int half = (x / 2);
+
+  for (int i = 2; i <= half; ++i) {
+    if (x % i == 0) return false;
+  }
+
+  return true;
 }
