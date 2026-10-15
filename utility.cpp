@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 // utility.cpp
 
 // IN THIS FILE, define any of your OWN functions you may need to 
@@ -22,9 +23,9 @@ bool isEven(int x) {
 bool isPrime(int x) { 
   if (x <= 1) return false;
 
-  int half = (x / 2);
+  int rt = std::sqrt(x);
 
-  for (int i = 2; i <= half; ++i) {
+  for (int i = 2; i <= rt; ++i) {
     if (x % i == 0) return false;
   }
 
